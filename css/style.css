@@ -1,0 +1,483 @@
+body {
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General styles */
+.bold {
+    font-weight: bold;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.f1 {
+    font-family: "Cinzel", serif;
+}
+.fH {
+    font-family: "Libertinus Sans", sans-serif;
+}
+.fh {
+    font-family: "Cormorant Garamond", serif;
+}
+.f {
+    font-family: "EB Garamond", serif;
+}
+
+
+/* Header */
+.header_image {
+    position: sticky;
+    top: 0px;
+    z-index: -1;
+
+    height: 40vh;
+    width: 100%;
+
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+/* Header -> navbar */
+.navbar{
+    position: relative;
+    background-color: #283618;
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+nav li {
+    border-right: 2px solid white;
+}
+
+nav a {
+    padding: 0px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: #fefae0;
+}
+
+/* Hamburger Icon - hidden on desktop */
+.hamburger {
+  font-size: 45px;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+  color: white;
+}
+
+
+/* Header -> Intro */
+.intro {
+    background-color: #e9edc9;
+    background-image: linear-gradient(0deg, #283618, #606c38, #283618);
+    color: white;
+
+    display: block; 
+    text-align: center;
+
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+.intro h1 {
+    font-size: 50px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+/* main */
+#about, #skills, #projects, #resume, #contact {
+    margin: 50px 0px;
+    border-top: 2px solid silver;
+}
+
+.about h1, .skills h1, .projects h1, .resume h1, .contact h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+/* main -> General container style */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    margin: 30px 0px;
+    gap: 20px;
+}
+
+/* main -> about section */
+.block1, .block2, .block3 {
+    flex: 1 1 300px;
+    padding: 20px;
+    min-width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.block1 { 
+    background-color: #ccd5ae;
+}
+.block2 { 
+    background-color: #e9edc9;
+}
+.block3 { 
+    background-color: #fefae0;
+}
+
+.block4 {
+    background-color: #faedcd;
+    padding: 20px;
+    transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.block1:hover, .block2:hover, .block3:hover, .block4:hover {
+    box-shadow: 0px 0px 15px black;
+    transform: scale(1.01);
+}
+
+/* main -> skills section */
+
+#skills {
+    background-image: linear-gradient(0deg, #ccd5ae, #fefae0, #ccd5ae);
+}
+
+.i1 h1.fH {
+    font-size: 30px;
+    margin: 40px 20px;
+    color: #283618;
+    text-align: center;
+}
+
+#skills .container a.fH {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    display: block;
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+#skills .container a.fH:hover {
+    color: #283618;
+}
+
+#skills .container > div {
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills .container i {
+    margin-bottom: 10px;
+    color: #5c5c5c;
+    transition: color 0.3s ease;
+}
+
+#skills .container > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+#skills .container > div:hover i {
+    color: #283618;
+}
+
+/* main -> projects section */
+
+#projects .f {
+    font-size: 17px;
+    text-align: justify;
+}
+
+.pbg {
+    background-color: #eaf4f4;
+    padding: 20px;
+    
+}
+
+.projectImg1 video{
+    float: left;
+    width: 620px;
+    height: 440px;
+    margin-right: 50px;
+} 
+.projectDesc1 {
+    padding: 20px;
+    margin: 100px 0px 0px 100px;
+}
+
+.projectImg2 img{
+    width: 620px;
+    height: 440px;
+    float: right;
+}
+
+.projectImg2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.r {
+    float: right;
+    margin-left: 50px;
+}
+
+.mr {
+    margin: 100px 100px 0px 0px;
+}
+
+.l {
+    float: left;
+    margin-right: 50px;
+}
+
+.ml {
+    margin: 100px 0px 0px 100px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.projectImg2:hover .overlay{
+    opacity: 1;
+}
+
+.exploreButton {
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    
+    padding: 12px 24px;
+    transition: background-color 0.3s ease;
+}
+
+.exploreButton:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+
+/* main -> Resume */
+
+#resume {
+    background-color: #e0e1dd;
+}
+
+.chunk1 {
+    flex: 1 1 300px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.chunk1 p {
+    padding: 100px;
+}
+
+.chunk2 {
+    padding: 0px 50px;
+}
+
+.chunk2 img {
+    height: 650px;
+    width: 600px;
+    border: 2px solid black;
+}
+
+.button {
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    
+    padding: 12px 24px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+}
+
+/* main -> contact section*/
+#contact p {
+    font-size: 17px;
+    text-align: center;
+}
+
+#contact i {
+    color: #5c5c5c;
+}
+
+#contact i:hover {
+    color: black;
+}
+
+/* Footer */
+footer {
+  background-color: #283618;
+  color: white;
+  padding: 50px;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Back TO Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #283618;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #606c38;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* For about section */
+    .block1, .block2, .block3 {
+        width: 100%;
+    }
+    
+    /* For skills section */
+    #skills .container > div {
+        width: 45%;
+    }
+
+    /* For Project Section */
+    #projects .m{
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .projectImg1 video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* For resume section */
+    .chunk1, .chunk2, .chunk1 p, .chunk2 img{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+
+    /* Nav-bar */
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        background-color: #283618;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #283618;
+
+        position: absolute;
+        top: 100%; 
+        right: 0;
+
+        width: 97%;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* For skills section */
+    #skills .container > div {
+        width: 100%;
+    }
+
+    .skills h1.f1 {
+        font-size: 2rem;
+    }
+
+    #skills .i1 h1.fH {
+        font-size: 1.5rem;
+    }
+}
